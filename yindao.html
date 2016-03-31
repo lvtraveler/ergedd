@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	 body {
+	 	margin:0;
+	 }
+	/*.yindao {
+		position: relative;
+		height: 100%;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.48);
+		opacity: 0.5
+	}*/
+	.maskDownload {
+		background: #000;
+		opacity: 0.6;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	.yindao .content {
+		color: #fff;
+	    position: absolute;
+	    padding-top: 85px;
+	    padding-bottom: 50px;
+	    text-align: left;
+	    background: #fff;
+	    width: 100%;
+	    font-family: font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+	    border-bottom-left-radius: 15px;
+	    border-bottom-right-radius: 15px;
+	}
+	.yindao .content h2 {
+		font-size: 5.1rem;
+		color: #222222;
+	}
+	.yindao .content h3 .fontColor1 {
+		color: #27D181;
+	}
+	.yindao .content h3 {
+		font-size: 3.6rem;
+		color: #222222;
+	}
+	.margin8 {
+		margin: 15px 0;
+	}
+	.content .mainContent {
+		    width: 67%;
+    		margin: 0 auto;
+   			margin-right: 160px;
+	}
+	.yindaoline {
+	background: url('img/yindao.png') no-repeat scroll;
+    background-size: contain;
+    width: 39%;
+    height: 64%;
+    position: absolute;
+    top: 0;
+    right: 30px;
+	}
+	</style>
+</head>
+<body>
+	<div class="maskDownload"></div>
+	<div class="yindao">
+		<div class="content">
+			<div class="mainContent">
+				<h2 class="margin8">链接打不开？</h2>
+				<h3 class="margin8">请点击右上角</h3>
+				<h3 class="margin8">选择<span class="fontColor1">“在浏览器上打开”</span></h3>
+			</div>
+			<div class="yindaoline"></div>
+		</div>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script type="text/javascript">
+		 $('.maskDownload').click(function(){
+        console.log("aaa");
+        $('.maskDownload').hide();
+         $('.yindao>.content').hide();
+	    	});
+	    $('.maskDownload').on("touchstart",function(){
+	    	console.log("aaa");
+	        $('.maskDownload').hide();
+	        $('.yindao>.content').hide();
+	    });
+	</script>
+</body>
+</html>
